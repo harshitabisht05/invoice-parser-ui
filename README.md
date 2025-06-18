@@ -38,6 +38,7 @@ invoice-parser-ui/
 - the first page is login page.
 - Login page and Register page.(Ojasweee)
 - Upload page will contain:(Paridhi)
+```
    | Element            | Description                                                                 |
 |--------------------|-----------------------------------------------------------------------------|
 | 📁 **File Picker**   | Lets user select an invoice image (`.jpg` or `.png`)                        |
@@ -45,6 +46,7 @@ invoice-parser-ui/
 | ✅ **Success Message** | Shows "Upload successful!" or similar feedback                             |
 | 🔐 **Token Auth**     | Adds JWT token to request header (`Authorization: Bearer ...`)             |
 | ⏩ **Redirect**       | After upload, redirect to `/dashboard` or show the uploaded file list      |
+```
 - Dashboard page will contain:(Harshita)
   | Element                  | Description                                                                 |
 |--------------------------|-----------------------------------------------------------------------------|
