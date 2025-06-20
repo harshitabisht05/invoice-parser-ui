@@ -31,7 +31,6 @@ invoice-parser-ui/
 │       ├── FileUploader.jsx
 │       └── Header.jsx
 ├── .gitignore
-├── index.html
 └── package.json
 ```
 - You can components if needed any in components folder.
