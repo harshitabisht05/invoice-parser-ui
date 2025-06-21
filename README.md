@@ -1,60 +1,67 @@
+# 🧾 AI Invoice Parser UI
 
-# Getting Started
+Frontend for the **AI Invoice Parser** application — a tool to upload invoice files (PDF/images), extract their content using AI, and view/manage them in a dashboard.
 
-First, run the development server:
-
-```bash
-npm install swiper
-
-npm run dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+> 🌐 Built with [Next.js](https://nextjs.org/), styled using [Tailwind CSS](https://tailwindcss.com/), and designed to connect to a FastAPI backend.
 
 ---
 
-## For Developers
+## 🚀 Features
 
-### Structure of this Project:
+- 🔒 User authentication (Login & Register)
+- 📤 Upload invoice images
+- 📁 Dashboard to view & delete uploaded files
+- 👁️ View extracted invoice content
+- 🧊 Glassmorphic, responsive UI
+- 🌙 Dark theme and modern design
+
+---
+
+## 🧑‍💻 Technologies Used
+
+- **Frontend**: Next.js 15, Tailwind CSS
+- **Backend (API)**: FastAPI (served separately)
+- **State**: React Hooks
+- **Auth**: Token-based (stored in localStorage)
+
+---
+
+## 💻 Getting Started
+
+### 1. Clone the Repository
 
 ```bash
-invoice-parser-ui/
-│
-├── public/
-│
+git clone https://github.com/harshitabisht05/invoice-parser-ui.git
+cd invoice-parser-ui
+```
+### 2. Install Dependencies
+
+```bash
+npm install
+```
+### 3. Setup Environment Variables
+Create a ```.env.local``` file at the root:
+```bash
+NEXT_PUBLIC_API_URL=http://localhost:8000
+```
+### 4. Start the Dev Server
+```bash
+npm run dev
+```
+Visit [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+## 📁 Project Structure
+```bash
+.
 ├── app/
-│   ├── dashboard/
-│   │   └── page.jsx  
-│   ├── login/
-│   │   └── page.jsx
-│   ├── register/
-│   │   └── page.jsx
-│   └── components/
-│       ├── FileUploader.jsx
-│       └── Header.jsx
-├── .gitignore
-└── package.json
-```
-- You can components if needed any in components folder.
-- the first page is login page.
-- Login page and Register page.(Ojasweee)
-- Upload page will contain:(Paridhi)
-```
-| Element              | Description                                                                 |
-|--------------------- |-----------------------------------------------------------------------------|
-| 📁 File Picker      | Lets user select an invoice image (`.jpg` or `.png`)                        |
-| 🚀 Upload Button    | Sends the selected file to the backend (`POST /files/upload`)               |
-| ✅ Success Message  | Shows "Upload successful!" or similar feedback                              |
-| 🔐 Token Auth       | Adds JWT token to request header (`Authorization: Bearer ...`)              |
-| ⏩ Redirect         | After upload, redirect to `/dashboard` or show the uploaded file list       |
-```
-- Dashboard page will contain:(Harshita)
-```
-  | Element                      | Description                                                                 |
-|--------------------------------|-----------------------------------------------------------------------------|
-| 📄 View Uploaded Invoices      | A list of all the invoices the user has uploaded                            |
-| 👀 View Invoice Details        | Click to go to `/invoice/[id]` to see extracted information                 |
-| 🗑️ Delete Invoices             | Remove any uploaded invoice                                                 |
-| ⏱️ See Upload Date             | Know when the invoice was uploaded                                          |
-| 🌀 (Optional) Show Status      | Display status like “Extracted” or “Pending extraction”                     |
+│   ├── dashboard/          # File list + file details
+│   ├── upload/             # File upload page
+│   ├── login/, register/   # Auth pages
+│   └── components/         # Reusable components (Navbar, Features, etc.)
+├── public/
+│   └── images/             # Backgrounds, logos, etc.
+├── .env.local
+├── README.md
+├── package.json
+└── next.config.js
 ```
